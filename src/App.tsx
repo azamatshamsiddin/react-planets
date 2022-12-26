@@ -1,9 +1,12 @@
-import React from "react";
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Vite Project</h1>
+		<nav className="nav">
+
+
+    </nav>
+
 		</div>
 	);
 }
