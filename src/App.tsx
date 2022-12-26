@@ -1,12 +1,9 @@
+import { Navigation } from "./components/Navigation/Navigation";
 
 function App() {
 	return (
 		<div className="App">
-		<nav className="nav">
-
-
-    </nav>
-
+			<Navigation />
 		</div>
 	);
 }
