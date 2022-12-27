@@ -1,0 +1,134 @@
+@use "./style-modules/typography" as *;
+@use "./style-modules/variables" as *;
+
+.main {
+	display: flex;
+	align-items: center;
+	margin-top: 6rem;
+}
+.img-wrapper {
+	margin: 0 auto;
+}
+.content {
+	max-width: 35rem;
+	margin-left: auto;
+	&__heading {
+		font-family: "Antonio", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 8rem;
+		line-height: 10.4rem;
+		text-transform: uppercase;
+	}
+	&__description {
+		font-family: "Spartan", sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 2.5rem;
+		margin: 2.4rem 0;
+	}
+	&__source-text {
+		font-family: "Spartan", sans-serif;
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 2.5rem;
+		color: #ffffff;
+		opacity: 0.5;
+	}
+	&__source-link {
+		font-family: "Spartan", sans-serif;
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: 2.5rem;
+		color: #ffffff;
+		text-decoration: underline;
+		position: relative;
+		opacity: 0.5;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url("./assets/images/arrow-square.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 1.3rem;
+			height: 1.3rem;
+			top: 3px;
+			right: -18px;
+		}
+	}
+}
+
+.tab {
+	&__list {
+		margin-top: 4rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+	}
+	&__item {
+		padding: 1.2rem 2.8rem;
+		border: 1px solid $clr-grey-90;
+		font-family: "Spartan", sans-serif;
+		font-weight: 700;
+		font-size: 1.2rem;
+		line-height: 2.5rem;
+		letter-spacing: 2.5px;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: all ease-in-out 0.3s;
+
+		&--active {
+			background-color: $clr-blue-70;
+			border: 1px solid $clr-blue-70;
+		}
+		&:hover {
+			background-color: $clr-blue-70;
+			border: 1px solid $clr-blue-70;
+		}
+	}
+	&__number {
+		margin-right: 2.5rem;
+		opacity: 0.5;
+	}
+}
+
+.info {
+  margin-top: 8rem;
+padding-bottom: 6rem;
+	display: flex;
+	gap: 3rem;
+	justify-content: space-between;
+	&__box {
+		padding: 20px 23px 27px;
+    width: 100%;
+		border: 1px solid $clr-grey-90;
+		color: $clr-white;
+	}
+
+	&__title {
+		font-family: "Spartan", sans-serif;
+		font-weight: 700;
+		font-size: 1.1rem;
+		line-height: 2.5rem;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		opacity: 0.5;
+		margin-bottom: 4px;
+	}
+
+	&__number {
+		font-family: "Antonio", sans-serif;
+		font-weight: 400;
+		font-size: 4rem;
+		line-height: 5.2rem;
+		letter-spacing: -1.5px;
+		text-transform: uppercase;
+	}
+}
